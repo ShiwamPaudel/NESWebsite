@@ -17,7 +17,7 @@ export default async function ProductPage({ params }: Props) {
     <section className="py-12">
       <div className="grid md:grid-cols-2 gap-6">
         <div>
-          <img src={product.image} alt={product.title} className="w-full rounded" />
+          <img src={product.image} alt={product.title} className="product-image w-full rounded" style={{maxWidth: '100%', height: 'auto'}} />
         </div>
         <div>
           <nav className="text-sm text-muted-gray mb-3">

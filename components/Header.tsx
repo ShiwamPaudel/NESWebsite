@@ -12,7 +12,7 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header className="py-4 bg-brand-navy text-white sticky top-0 z-50">
+    <header className="site-header py-4 bg-brand-navy text-white sticky top-0 z-50">
       <div className="container flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <img src="/images/logo.png" alt="NSE Logo" width={160} />
