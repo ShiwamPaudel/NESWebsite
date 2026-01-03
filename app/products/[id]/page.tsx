@@ -1,5 +1,6 @@
 import { getProduct, getProducts } from '../../../lib/products';
 import ProductDetailClient from '../../../components/ProductDetailClient';
+import Link from 'next/link';
 
 type Props = { params: { id: string } };
 
@@ -21,7 +22,7 @@ export default async function ProductPage({ params }: Props) {
         </div>
         <div>
           <nav className="text-sm text-muted-gray mb-3">
-            <a href="/products" className="hover:underline">Products</a> / <span>{product.category}</span>
+            <Link href="/products" className="hover:underline text-muted-gray">Products</Link> / <span>{product.category}</span>
           </nav>
 
           <h1 className="text-2xl font-bold mb-2">{product.title}</h1>
