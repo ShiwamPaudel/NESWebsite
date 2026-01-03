@@ -37,7 +37,6 @@ export default async function ProductPage({ params }: Props) {
           </div>
 
           {/* client side actions */}
-          {/* @ts-expect-error Server -> Client prop */}
           <ProductDetailClient product={product} />
         </div>
       </div>

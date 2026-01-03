@@ -20,9 +20,9 @@ export default function Header() {
 
         {/* desktop nav */}
         <nav className="hidden md:flex gap-8 items-center">
-          <Link href="/products" className="hover:underline">Products</Link>
-          <Link href="/about" className="hover:underline">About</Link>
-          <Link href="/contact" className="hover:underline">Contact</Link>
+          <Link href="/products" className="hover:underline text-white">Products</Link>
+          <Link href="/about" className="hover:underline text-white">About</Link>
+          <Link href="/contact" className="hover:underline text-white">Contact</Link>
         </nav>
 
         {/* mobile controls */}
@@ -43,9 +43,9 @@ export default function Header() {
       {/* mobile nav overlay */}
       <div className={`md:hidden fixed inset-0 bg-brand-navy/95 transform ${open ? 'translate-y-0' : '-translate-y-full'} transition-transform duration-300 z-40`}>
         <div className="p-6 pt-24 flex flex-col gap-6 text-xl">
-          <Link href="/products" onClick={() => setOpen(false)} className="block">Products</Link>
-          <Link href="/about" onClick={() => setOpen(false)} className="block">About</Link>
-          <Link href="/contact" onClick={() => setOpen(false)} className="block">Contact</Link>
+          <Link href="/products" onClick={() => setOpen(false)} className="block text-white">Products</Link>
+          <Link href="/about" onClick={() => setOpen(false)} className="block text-white">About</Link>
+          <Link href="/contact" onClick={() => setOpen(false)} className="block text-white">Contact</Link>
         </div>
       </div>
     </header>

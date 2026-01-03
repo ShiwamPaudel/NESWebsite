@@ -9,7 +9,6 @@ export default async function ProductsPage() {
       <h1 className="text-3xl font-semibold mb-6">All Products</h1>
 
       {/* client side list with filters and search */}
-      {/* @ts-expect-error Server -> Client prop */}
       <ProductListClient products={products} />
     </section>
   );
