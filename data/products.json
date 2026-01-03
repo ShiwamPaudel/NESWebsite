@@ -1,0 +1,56 @@
+[
+  {
+    "id": "product-01",
+    "title": "Pillar Cock",
+    "image": "/images/product-01.png",
+    "price": "NRs. 2,900",
+    "category": "Bathroom",
+    "description": "Durable pillar cock with premium finish.",
+    "specs": { "brand": "Hindware", "warranty": "10 Years", "size": "15x10x12 cm" }
+  },
+  {
+    "id": "product-02",
+    "title": "Basin Cock",
+    "image": "/images/product-02.png",
+    "price": "NRs. 2,500",
+    "category": "Bathroom",
+    "description": "Sleek basin mixer for modern bathrooms.",
+    "specs": { "brand": "Hindware", "warranty": "8 Years", "size": "12x8x10 cm" }
+  },
+  {
+    "id": "product-03",
+    "title": "Head Shower",
+    "image": "/images/product-03.png",
+    "price": "NRs. 3,200",
+    "category": "Bathroom",
+    "description": "High-flow rain shower head.",
+    "specs": { "brand": "Grohe", "warranty": "5 Years", "size": "20x20 cm" }
+  },
+  {
+    "id": "product-04",
+    "title": "Wall Mixer",
+    "image": "/images/product-04.png",
+    "price": "NRs. 3,800",
+    "category": "Kitchen",
+    "description": "Durable wall mixer for kitchen sinks.",
+    "specs": { "brand": "Hindware", "warranty": "7 Years", "size": "18x12x10 cm" }
+  },
+  {
+    "id": "product-05",
+    "title": "Table Mounted Sink Mixer",
+    "image": "/images/product-05.png",
+    "price": "NRs. 4,200",
+    "category": "Kitchen",
+    "description": "Premium sink mixer with elegant design.",
+    "specs": { "brand": "Hindware", "warranty": "10 Years", "size": "20x15x12 cm" }
+  },
+  {
+    "id": "product-06",
+    "title": "Teflon Tape",
+    "image": "/images/product-07.png",
+    "price": "NRs. 120",
+    "category": "Accessories",
+    "description": "High-quality PTFE tape for watertight connections.",
+    "specs": { "brand": "Generic", "warranty": "1 Year", "size": "5m" }
+  }
+]
