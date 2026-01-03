@@ -1,4 +1,4 @@
-import './styles/globals.css';
+import '../styles/globals.css';
 import type { PropsWithChildren } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
