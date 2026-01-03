@@ -1,13 +1,16 @@
 "use client";
 import { useState } from "react";
 import type { Product } from "../lib/products";
+import { useCart } from './CartContext';
 
 export default function ProductDetailClient({ product }: { product: Product }) {
   const [qty, setQty] = useState<number>(1);
   const [added, setAdded] = useState<boolean>(false);
+  const { add: addToCart } = useCart();
 
   function add() {
-    // placeholder: in future integrate cart context or API
+    // add to cart
+    addToCart({ id: product.id, title: product.title, price: product.price, image: product.image }, qty);
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
   }

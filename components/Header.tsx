@@ -1,6 +1,7 @@
 "use client";
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import CartDrawer from './CartDrawer';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -27,7 +28,8 @@ export default function Header() {
         {/* mobile controls */}
         <div className="flex items-center gap-3">
           <input placeholder="Search product" className="hidden md:block bg-white text-gray-800 rounded px-3 py-1" />
-          <button className="btn-secondary hidden md:block">Cart</button>
+
+          <CartDrawer />
 
           <button aria-label="open menu" className="md:hidden p-2" onClick={() => setOpen(!open)}>
             <span className="sr-only">Toggle menu</span>
