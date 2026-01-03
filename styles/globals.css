@@ -18,4 +18,10 @@
 /* product card */
 .card-hero { @apply rounded overflow-hidden shadow-sm hover:shadow-lg transition }
 
+/* small screen tweaks */
+@media (max-width: 640px) {
+  .container { padding-left: 1rem; padding-right: 1rem }
+  .btn-primary { @apply w-full text-center }
+}
+
 .container { @apply max-w-6xl mx-auto px-6 }

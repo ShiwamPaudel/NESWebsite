@@ -1,5 +1,5 @@
-import ProductCard from '../../components/ProductCard';
 import { getProducts } from '../../lib/products';
+import ProductListClient from '../../components/ProductListClient';
 
 export default async function ProductsPage() {
   const products = await getProducts();
@@ -7,11 +7,10 @@ export default async function ProductsPage() {
   return (
     <section className="py-12">
       <h1 className="text-3xl font-semibold mb-6">All Products</h1>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {products.map((p) => (
-          <ProductCard key={p.id} product={p} />
-        ))}
-      </div>
+
+      {/* client side list with filters and search */}
+      {/* @ts-expect-error Server -> Client prop */}
+      <ProductListClient products={products} />
     </section>
   );
 }

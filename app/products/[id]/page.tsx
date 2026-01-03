@@ -1,5 +1,5 @@
 import { getProduct, getProducts } from '../../../lib/products';
-import Image from 'next/image';
+import ProductDetailClient from '../../../components/ProductDetailClient';
 
 type Props = { params: { id: string } };
 
@@ -20,6 +20,10 @@ export default async function ProductPage({ params }: Props) {
           <img src={product.image} alt={product.title} className="w-full rounded" />
         </div>
         <div>
+          <nav className="text-sm text-muted-gray mb-3">
+            <a href="/products" className="hover:underline">Products</a> / <span>{product.category}</span>
+          </nav>
+
           <h1 className="text-2xl font-bold mb-2">{product.title}</h1>
           <p className="text-lg text-muted-gray mb-4">{product.description}</p>
           <p className="text-xl font-semibold mb-4">{product.price}</p>
@@ -31,6 +35,10 @@ export default async function ProductPage({ params }: Props) {
               <div><strong>Size</strong><br />{product.specs.size}</div>
             </div>
           </div>
+
+          {/* client side actions */}
+          {/* @ts-expect-error Server -> Client prop */}
+          <ProductDetailClient product={product} />
         </div>
       </div>
     </section>
