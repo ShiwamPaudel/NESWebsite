@@ -8,7 +8,7 @@ export default function CartDrawer() {
   const { items, totalItems, totalPrice, updateQty, remove, clear } = useCart();
 
   return (
-    <div>
+    <div suppressHydrationWarning>
       <button aria-label="open cart" className="relative" onClick={() => setOpen((v) => !v)}>
         <span className="btn-secondary">Cart</span>
         {totalItems > 0 && <span className="absolute -top-2 -right-2 bg-gold text-[#072237] rounded-full px-2 text-xs">{totalItems}</span>}
