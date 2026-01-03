@@ -1,12 +1,16 @@
 import Link from 'next/link';
 import { getProducts } from '../lib/products';
 import ProductCard from '../components/ProductCard';
+import dynamic from 'next/dynamic';
+
+const CSSCheck = dynamic(() => import('../components/CSSCheck'), { ssr: false });
 
 export default async function Home() {
   const products = await getProducts();
 
   return (
     <section className="py-12">
+      <CSSCheck />
       <div className="grid md:grid-cols-3 gap-6">
         <div className="col-span-2">
           <h1 className="text-4xl font-bold mb-4">Stylish Bathroom & Kitchen Solutions</h1>
