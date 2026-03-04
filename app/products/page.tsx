@@ -1,6 +1,11 @@
 import { getProducts } from '../../lib/products';
 import ProductListClient from '../../components/ProductListClient';
 
+export const metadata = {
+  title: 'Premium Bathroom & Kitchen Accessories in Nepal | NSE',
+  description: 'Explore the complete catalog of Premium Bathroom and Kitchen Accessories available at New Shiwani Enterprises. Serving Kathmandu, Bhaktapur, and Lalitpur with high-end taps and accessories.'
+};
+
 export default async function ProductsPage() {
   const products = await getProducts();
 

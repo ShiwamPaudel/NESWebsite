@@ -4,6 +4,15 @@ import Link from 'next/link';
 
 type Props = { params: { id: string } };
 
+export async function generateMetadata({ params }: Props) {
+  const product = await getProduct(params.id);
+  if (!product) return {};
+  return {
+    title: `${product.title} in Nepal | Kitchen & Bathroom Fittings | NSE`,
+    description: `Premium ${product.category} available at New Shiwani Enterprises. Serving Kathmandu, Bhaktapur, and Lalitpur with high-end taps and accessories.`
+  };
+}
+
 export async function generateStaticParams() {
   const products = await getProducts();
   return products.map((p) => ({ id: p.id }));
@@ -18,7 +27,7 @@ export default async function ProductPage({ params }: Props) {
     <section className="py-12">
       <div className="grid md:grid-cols-2 gap-6">
         <div>
-          <img src={product.image} alt={product.title} className="product-image w-full rounded" style={{maxWidth: '100%', height: 'auto'}} />
+          <img src={product.image} alt={`${product.title} - Bathroom accessories Bhaktapur / Kitchen taps Kathmandu`} className="product-image w-full rounded" style={{ maxWidth: '100%', height: 'auto' }} />
         </div>
         <div>
           <nav className="text-sm text-muted-gray mb-3">
